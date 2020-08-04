@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  pserver: 
+    image: squid:20.04
+    init: true
+    volumes:
+      - sconfig:/etc/squid
+      - scache:/var/spool/squid
+    restart: always
+    ports:
+      - 3128:3128
+    container_name: pserver
+volumes:
+  sconfig:
+    external: true
+  scache:
+    external: true  
