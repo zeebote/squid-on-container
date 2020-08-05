@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   pserver: 
-    image: squid:20.04
+    image: trucv/squid:20.04
     init: true
     volumes:
       - sconfig:/etc/squid
