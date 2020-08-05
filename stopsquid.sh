@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Check id squid container is running
-docker exec -ti squid ps aux >/dev/null 2>&1
+docker exec -ti pserver ps aux >/dev/null 2>&1
 if [ $? != 0 ]; then 
    echo "Squid seem not running or already down, exist..."
    exit 1   
