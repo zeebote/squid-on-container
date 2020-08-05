@@ -11,11 +11,13 @@ docker run -d -v sconfig:/etc/squid \
               -v scache:/var/spool/squid \
               --restart=always --init=true \
               --name pserver trucv/squid:20.04
-Or you can use included startsquid.sh script to start the container with docker-compose.
+or you can use included startsquid.sh script to start the container with docker-compose.
 To modify squid configuration file run this command:
 sudo vi $(docker inspect -f {{.Mountpoint}} sconfig)"/squid.conf"
 Then reload the configuration without restart the container:
 docker exec pserver squid -k reconfigure
+Access to container shell run this command:
+docker exec -ti pserver bash
 
 
 
