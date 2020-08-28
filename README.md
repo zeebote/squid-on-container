@@ -26,5 +26,6 @@ Access to container shell run this command:
 docker exec -ti pserver bash
 
 
-
+# References
+Dockerfile repos https://github.com/zeebote/squid-on-container
 
